@@ -104,6 +104,9 @@ public class ARichEditor implements EditorMenuTabBar.TabClickListener {
 
             }
         });
+        /**
+         * 拦截url 处理button 的选择状态
+         */
         mEditor.setOnDecorationChangeListener(new EditorWebView.OnDecorationStateListener() {
             @Override
             public void onStateChangeListener(String text, List<EditorWebView.Type> types) {
@@ -123,7 +126,7 @@ public class ARichEditor implements EditorMenuTabBar.TabClickListener {
                             mMenuTabSocondBar.getTabView(EditorMenuConfig.H1).setSelected(true);
                             temp.isSelectble = true;
                         }
-                        if (types.contains(EditorWebView.Type.orderedlist) && EditorMenuConfig.LIST_CIRCLE == temp.menuType) {
+                        if (types.contains(EditorWebView.Type.orderedlist) && EditorMenuConfig.LIST_NUMBER == temp.menuType) {
                             mMenuTabSocondBar.getTabView(EditorMenuConfig.LIST_NUMBER).setSelected(true);
                             temp.isSelectble = true;
                         }
@@ -135,7 +138,7 @@ public class ARichEditor implements EditorMenuTabBar.TabClickListener {
                             mMenuTabSocondBar.getTabView(EditorMenuConfig.STRIKE_THROUGH).setSelected(true);
                             temp.isSelectble = true;
                         }
-                        if (types.contains(EditorWebView.Type.unorderedList) && EditorMenuConfig.LIST_NUMBER == temp.menuType) {
+                        if (types.contains(EditorWebView.Type.unorderedList) && EditorMenuConfig.LIST_CIRCLE == temp.menuType) {
                             mMenuTabSocondBar.getTabView(EditorMenuConfig.LIST_CIRCLE).setSelected(true);
                             temp.isSelectble = true;
                         }
