@@ -363,7 +363,7 @@ RE.editor.addEventListener("blur",function(evt){
     			AndroidInterface.editorblur();
     	});
 
-RE.title.addEventListener("keyup",function(evt){
+RE.title.addEventListener("keyup",function(evt){  //监听title回退
 if (evt.which == 13 ) {
  evt.preventDefault();
     RE.editor.focus();
